@@ -13,6 +13,9 @@
 { "name": "code-insiders", "type": "Doc-View" }
 { "name": "code.js", "type": "Doc-View" }
 
+# https://kilo.ai
+{ "name": "kilo", "type": "Doc-View" }
+
 # vim: https://www.vim.org/
 # nvim: https://neovim.io/
 { "name": "nvim", "type": "Doc-View" }

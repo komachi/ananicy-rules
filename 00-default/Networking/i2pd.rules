@@ -1,2 +1,6 @@
 # i2pd: https://i2pd.website
 { "name": "i2pd", "type": "Service" }
+<<<<<<< HEAD
+=======
+{ "name": "i2pd-daemon", "type": "Service" }
+>>>>>>> 1070a529 (feat: new rules for some system utilies, network daemons and other)
