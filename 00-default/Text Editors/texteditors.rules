@@ -12,7 +12,6 @@
 { "name": "code", "type": "Doc-View" }
 { "name": "code-insiders", "type": "Doc-View" }
 { "name": "code.js", "type": "Doc-View" }
-{ "name": "micro", "type": "Doc-View" }
 
 # vim: https://www.vim.org/
 # nvim: https://neovim.io/

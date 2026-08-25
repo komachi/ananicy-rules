@@ -3,4 +3,3 @@
 { "name": "virtlogd", "type": "Service" }
 { "name": "virtlockd", "type": "Service" }
 { "name": "virt-ssh-helper", "type": "Service" }
-{ "name": "virtlockd", "type": "Service" }

@@ -2,7 +2,6 @@
 { "name": "badblocks", "type": "BG_CPUIO" }
 { "name": "debugfs", "type": "BG_CPUIO" }
 { "name": "dumpe2fs", "type": "BG_CPUIO" }
-{ "name": "debugfs", "type": "BG_CPUIO" }
 { "name": "e2fsck", "type": "BG_CPUIO" }
 { "name": "e2image", "type": "BG_CPUIO" }
 { "name": "e2label", "type": "BG_CPUIO" }
