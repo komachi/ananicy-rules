@@ -1,2 +1,3 @@
 # Cmake : https://cmake.org/
 { "name": "cmake-gui", "type": "BG_CPUIO" }
+{ "name": "cmake", "type": "BG_CPUIO" }
