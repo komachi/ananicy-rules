@@ -1,13 +1,8 @@
-# Ananicy-cpp-rules for CachyOS
+# ananicy-rules
 
-This is a ananicy-cpp-rules collection for ananicy-cpp maintained by the CachyOS team and the community.
+This is collection of [ananicy-cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp) rules forked from [CachyOS collection of ananicy-rules](https://github.com/CachyOS/ananicy-rules).
 
-## Ananicy-cpp & ananicy-cpp-rules
-
-- **[ananicy-cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp)** - daemon that automatically adjusts the nice levels of processes.
-- **ananicy-cpp-rules** - list of rules used to assign specific nice values to specific processes.
-
-> The nice value determines the priority of a process, with higher values indicating lower priority and making the process "nicer" to other processes. By default, on Linux workstations, the nice value is set to 0.
+Main difference is that this fork adds Debian-specific rules and rules for compilers, originally to be used for [ansible-decent-desktop](https://github.com/komachi/ansible-decent-desktop) project.
 
 ## Installation
 
@@ -19,50 +14,9 @@ This script will copy all the rules from this repo to `/etc/ananicy.d` dir.
 
 ## How to contribute
 
-You can add your favorite games, apps, and more. Any help would be greatly appreciated!
-**For example, let's say you want to add a game:**
+If your rule can be added to upstream collection maintained by CachyOS, [please open PR there](https://github.com/CachyOS/ananicy-rules). This fork backports rules from upstream.
 
-1. Go to [00-default](https://github.com/CachyOS/ananicy-rules/tree/master/00-default)
-2. Go to [Games](https://github.com/CachyOS/ananicy-rules/tree/master/00-default/Games)
-3. Navigate to the desired folder depending on:
-	- Game is meant to be ran under with Proton: [`wine_proton`](https://github.com/CachyOS/ananicy-rules/tree/master/00-default/Games/wine_proton) → *Open the corresponding file depending on the letter.*
-	- Provides a native version for Linux: [`linux-native`](https://github.com/CachyOS/ananicy-rules/tree/master/00-default/Games/linux-native) → *Open the corresponding file depending on the letter.*
-4. Open the corresponding file depending on the letter.
-5. Follow the examples from below.
-
-### Examples of rules
-
-The **first example** is simple. In the **second example**, it is different because some games generate multiple processes. In such cases, you need to add all the processes related to the game.
-
-Please also add the name of the game next to the url, which you get the name of said game from the Steam store.
-
-If not from any store add name you think it needs.
-
-#### 1. [Example rule for Just Cause 2](https://github.com/CachyOS/ananicy-rules/blob/b3bf685c267cdc817a7067c6c16c9725cd5c5250/00-default/Games/wine_proton/wine_proton_j.rules#L168)
-
-```
-# Just Cause 2 https://store.steampowered.com/app/8190/Just_Cause_2/
-{ "name": "JustCause2.exe", "type": "Game" }
-```
-
-#### 2. [Example rules for Mortal Shell](https://github.com/CachyOS/ananicy-rules/blob/ebf4fa421e128ccb3c16e4a0cbff4a00d06aacdc/00-default/Games/wine_proton/wine_proton_m.rules#L1382)
-
-```
-# Mortal Shell https://store.steampowered.com/app/1110910/Mortal_Shell/
-{ "name": "Dungeonhaven.exe", "type": "BG_CPUIO" }
-{ "name": "Dungeonhaven-Win64-Shipping.exe", "type": "Game" }
-```
-
-#### 3. [Example rules for Portal 2 which is Linux native game](https://github.com/CachyOS/ananicy-rules/blob/b3bf685c267cdc817a7067c6c16c9725cd5c5250/00-default/Games/linux-native/linux-native_p.rules#L157)
-
-```
-# Portal 2 https://store.steampowered.com/app/620/Portal_2/
-{ "name": "portal2_linux", "type": "Game" }
-```
-
-### <u>You can also contribute by opening an [issue](https://github.com/CachyOS/ananicy-rules/issues) and providing information about the application </u>
-
-**Make sure the app is not already in the repository before opening an issue.**
+If your rule is applicable only for Debian or it's a rule for a compiler, you can open PR here.
 
 ### Linting
 
@@ -88,7 +42,3 @@ Here is a list of tools
 - System Monitor [KDE Plasma](https://apps.kde.org/plasma-systemmonitor/) or [GNOME](https://help.gnome.org/users/gnome-system-monitor/)
 
 **Don't use absolute paths for the executables. Process name alone is enough.**
-
-## [GameMode](https://github.com/FeralInteractive/gamemode) + [ananicy-cpp](https://gitlab.com/ananicy-cpp/ananicy-cpp) = bad idea
-
-GameMode and ananicy-cpp both adjust the nice levels of processes. However, combining both tools is not recommended, and we strongly advise against doing so.
